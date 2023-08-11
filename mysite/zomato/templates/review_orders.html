@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Review Orders</title>
+</head>
+<body>
+    <h1>Review Orders</h1>
+    <table>
+        <tr>
+            <th>Order ID</th>
+            <th>Customer</th>
+            <th>Dish</th>
+            <th>Status</th>
+            <th>Remaining Quantity</th>
+        </tr>
+        {% for order in orders_data %}
+        <tr>
+            <td>{{ order.0 }}</td>
+            <td>{{ order.1 }}</td>
+            <td>{{ order.2 }}</td>
+            <td>{{ order.3 }}</td>
+            <td>{{ order.4 }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    
+    <a href="{% url 'admin_menu' %}">Back to Admin Menu</a>
+</body>
+</html>
